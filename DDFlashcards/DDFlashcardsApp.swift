@@ -11,7 +11,7 @@ import SwiftUI
 struct DDFlashcardsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TopicView()
         }
     }
 }

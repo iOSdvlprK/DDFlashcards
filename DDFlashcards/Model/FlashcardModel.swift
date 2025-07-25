@@ -5,13 +5,15 @@
 //  Created by joe on 7/24/25.
 //
 
-import Foundation
+import SwiftUI
 
 struct FlashcardModel: Identifiable {
     let id = UUID()
     let topic: String
     let topicDescription: String
-    let topicImageName: String
+    let topicImageName: ImageResource
     let questionModels: [QuestionModel]
-    let numberOfQuestions: Int
+    var numberOfQuestions: Int {
+        questionModels.count
+    }
 }

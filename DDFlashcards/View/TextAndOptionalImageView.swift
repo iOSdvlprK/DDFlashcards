@@ -20,6 +20,7 @@ struct TextAndOptionalImageView: View {
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                     .padding()
+                    .frame(maxWidth: .infinity)
                 
                 if let imageName {
                     Image(imageName)

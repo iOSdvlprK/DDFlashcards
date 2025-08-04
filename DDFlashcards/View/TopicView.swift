@@ -15,7 +15,10 @@ struct TopicView: View {
             List(flashCardViewModel.flashCardModels) { flashCardModel in
                 NavigationLink {
                     // TODO: implement question view
-                    Text(flashCardModel.topic)
+                    QuestionsView(questionModels: QuestionViewModel.countryQuestionModels,
+                        topic: "Countries",
+                        numberOfQuestions: QuestionViewModel.countryQuestionModels.count
+                    )
                 } label: {
                     FlashItemRow(flashcardModel: flashCardModel)
                 }

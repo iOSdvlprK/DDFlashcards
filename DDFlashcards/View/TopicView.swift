@@ -14,11 +14,11 @@ struct TopicView: View {
         NavigationStack {
             List(flashCardViewModel.flashCardModels) { flashCardModel in
                 NavigationLink {
-                    // TODO: implement question view
-                    QuestionsView(questionModels: QuestionViewModel.countryQuestionModels,
-                        topic: "Countries",
-                        numberOfQuestions: QuestionViewModel.countryQuestionModels.count
-                    )
+                    QuestionsView(questionModels: flashCardModel.questionModels,
+                          topic: flashCardModel.topic,
+                          numberOfQuestions: flashCardModel.numberOfQuestions)
+                        .navigationBarBackButtonHidden()
+                        .navigationBarTitleDisplayMode(.inline)
                 } label: {
                     FlashItemRow(flashcardModel: flashCardModel)
                 }
